@@ -30,4 +30,11 @@ public class MainActivity extends AppCompatActivity {
         Intent gg=new Intent(Intent.ACTION_VIEW, Uri.parse(ulr));
         startActivity(gg);
     }
+    public void Mes(View view){
+        Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+        sendIntent.putExtra("address"  , new String("0411518747"));
+        sendIntent.putExtra("sms_body", "Bonjour ENPO!");
+        sendIntent.setType("vnd.android-dir/mms-sms");
+        startActivity(sendIntent);
+    }
 }
